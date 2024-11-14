@@ -1,0 +1,19 @@
+<section id="skills" class="skills" #skillSection>
+    <div class="skills-content">
+        <h1>My Skills</h1>
+        <div class="line"></div>
+        <div class="skills-grid">
+            <div class="skill-box" *ngFor="let skill of skills">
+                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon" />
+                <div class="skill-name">{{ skill.name }}</div>
+            </div>
+        </div>
+
+        <!-- GitHub Projects Card -->
+        <div class="github-card">
+            <h2>See My Projects</h2>
+            <p>Explore my work on GitHub for a closer look at what I’ve built.</p>
+            <a href="https://github.com/Mahima0123" target="_blank" class="github-link">Visit My GitHub</a>
+        </div>
+    </div>
+</section>

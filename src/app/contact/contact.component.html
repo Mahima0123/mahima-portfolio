@@ -1,0 +1,24 @@
+<section id="contact" class="contact">
+    <div class="contact-content">
+        <h2>Let's Connect</h2>
+        <p class="tagline">Building digital bridges to connect and collaborate.</p>
+        
+        <div class="contact-cards">
+            <div class="contact-card" *ngFor="let link of contactLinks">
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+                    <div class="icon-wrapper">
+                        <img [src]="link.icon" [alt]="link.label" class="contact-icon" />
+                    </div>
+                    <div class="card-text">
+                        <span class="contact-label">{{ link.label }}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="qr-code-section">
+            <p>Scan to save my contact:</p>
+            <img src="../../assets/images/qr.png" alt="QR Code for contact info" class="qr-code" />
+        </div>
+    </div>
+</section>

@@ -1,1 +1,88 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset default margin and padding for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* A clean, modern font */
+}
+
+/* Global background and text styling */
+body, html {
+    background-color: #0d0d0d; /* Black background for the entire page */
+    color: #c6a664; /* Coffee color for text */
+    height: 100%;
+    scroll-behavior: smooth; /* Smooth scrolling for navigation */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Global link styles */
+a {
+    color: #c6a664; /* Coffee color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff; /* White text on hover */
+}
+
+/* Heading styles for a premium feel */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #ffffff; /* White for headings */
+    text-transform: uppercase;
+    margin-bottom: 0.5rem; /* Add some spacing below headings */
+}
+
+/* Button styles */
+button {
+    background-color: #c6a664; /* Coffee color for buttons */
+    color: #0d0d0d; /* Black text */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff; /* White background on hover */
+    color: #0d0d0d; /* Black text on hover */
+}
+
+/* Global container spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section padding: Adjust for tighter layout */
+section {
+    padding: 3rem 0; /* Reduced padding for less spacing */
+}
+
+/* Smooth transitions for hover effects */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c6a664; /* Coffee-colored scrollbar thumb */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Slightly lighter black for the track */
+}
+
+/* Section-specific adjustments for better layout */
+section:not(:last-child) {
+    margin-bottom: 0; /* No extra margin at the bottom of sections */
+}

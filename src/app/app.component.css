@@ -1,0 +1,8 @@
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0d0d0d; /* Match your theme's background */
+    color: #c6a664; /* Coffee color for text */
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(198, 166, 100, 0.2);
+}

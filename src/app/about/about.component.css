@@ -1,0 +1,122 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0d0d0d;
+    /* Black background */
+    color: #c6a664;
+    /* Coffee color for text */
+    padding: 2rem;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 1s ease-out;
+}
+
+.about.slide-in {
+    opacity: 1;
+    animation: slideInFromTop 2s ease-out forwards;
+    /* Slide down effect */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-50px);
+    /* Start position for sliding effect */
+}
+
+.slide-in .about-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Keyframes for sliding content from top */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Text area style */
+.text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.text h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.text h3 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c6a664;
+    margin-bottom: 1rem;
+    max-width: 80%;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #c6a664;
+    margin-bottom: 1rem;
+}
+
+/* Image Container with slanted oval shape */
+.image-container {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    /* Adjust height for an oval */
+    overflow: hidden;
+}
+
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.line {
+    width: 50px;
+    height: 3px;
+    background-color: #c6a664;
+    margin: 1rem 0;
+    border-radius: 2px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="container">
+      <div class="brand">
+        <a href="#" class="logo">Mahima</a>
+      </div>
+      <ul class="nav-links" [ngClass]="{ 'nav-active': isMenuOpen }">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#background" class="nav-item">Background</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+      <div class="burger" (click)="toggleMenu()">
+        <span [ngClass]="{ 'burger-line1': isMenuOpen }"></span>
+        <span [ngClass]="{ 'burger-line2': isMenuOpen }"></span>
+        <span [ngClass]="{ 'burger-line3': isMenuOpen }"></span>
+      </div>
+    </div>
+  </nav>
+  
