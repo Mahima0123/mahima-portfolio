@@ -86,11 +86,10 @@
   /* Image Container with slanted oval shape */
 .image-container {
     position: relative;
-    width: 300px;
+    width: 500px;
     height: 400px; /* Adjust height for an oval */
     overflow: hidden;
-    border-radius: 50%;
-    transform: rotate(20deg); /* Diagonal slant */
+    border-radius: 5%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
