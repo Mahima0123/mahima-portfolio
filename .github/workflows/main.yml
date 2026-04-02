@@ -21,7 +21,7 @@ jobs:
       run: npm install
 
     - name: Build Angular project
-      run: npm run build -- --prod --base-href "https://Mahima0123.github.io/mahima-portfolio/"
+      run: npm run build -- --configuration production --base-href "https://Mahima0123.github.io/mahima-portfolio/"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
