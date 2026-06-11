@@ -1,0 +1,6 @@
+npm run build
+rm -rf docs/*
+cp -R dist/portfolio/* docs/
+git add .
+git commit -m "deploy site"
+git push origin master
