@@ -2,121 +2,135 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #0d0d0d;
-    /* Black background */
-    color: #c6a664;
-    /* Coffee color for text */
-    padding: 2rem;
+    min-height: 100vh;
+    background: #0d0d0d;
+    color: #ffffff;
+    padding: 4rem 8%;
     opacity: 0;
-    /* Initially hidden */
     transition: opacity 1s ease-out;
 }
 
 .about.slide-in {
     opacity: 1;
-    animation: slideInFromTop 2s ease-out forwards;
-    /* Slide down effect */
+    animation: fadeUp 1.2s ease forwards;
 }
 
 .about-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 80px;
     width: 100%;
-    max-width: 1200px;
-    opacity: 0;
-    /* Initially hidden */
-    transform: translateY(-50px);
-    /* Start position for sliding effect */
+    max-width: 1300px;
 }
 
-.slide-in .about-content {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-/* Keyframes for sliding content from top */
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Text area style */
 .text {
-    max-width: 50%;
-    text-align: left;
+    flex: 1;
 }
 
 .text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #ffffff;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.text h3 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #c6a664;
-    margin-bottom: 1rem;
-    max-width: 80%;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .line {
-    width: 50px;
-    height: 2px;
-    background-color: #c6a664;
-    margin-bottom: 1rem;
+    width: 70px;
+    height: 4px;
+    background: #c6a664;
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 
-/* Image Container with slanted oval shape */
+.about-description {
+    color: #d4d4d4;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.highlight {
+    padding: 15px 18px;
+    background: rgba(198, 166, 100, 0.08);
+    border: 1px solid rgba(198, 166, 100, 0.15);
+    border-radius: 14px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+    background: rgba(198, 166, 100, 0.15);
+}
+
 .image-container {
-    position: relative;
-    width: 500px;
-    height: 400px;
-    /* Adjust height for an oval */
-    overflow: hidden;
+    flex: 1;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(198, 166, 100, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
-
 
 .profile-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: auto;
+    object-fit: contain;
 }
 
-.line {
-    width: 50px;
-    height: 3px;
-    background-color: #c6a664;
-    margin: 1rem 0;
-    border-radius: 2px;
-}
-
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
     }
 
-    .text {
-        max-width: 100%;
-        margin-bottom: 2rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .about-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .line {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .image-container {
-        width: 200px;
-        height: 200px;
+        max-width: 350px;
+    }
+
+    .text h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .about {
+        padding: 3rem 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
     }
 }

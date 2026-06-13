@@ -1,19 +1,54 @@
 <section id="skills" class="skills" #skillSection>
-    <div class="skills-content">
-        <h1>My Skills</h1>
-        <div class="line"></div>
-        <div class="skills-grid">
-            <div class="skill-box" *ngFor="let skill of skills">
-                <img [src]="skill.icon" [alt]="skill.name" class="skill-icon" />
-                <div class="skill-name">{{ skill.name }}</div>
-            </div>
-        </div>
 
-        <!-- GitHub Projects Card -->
-        <div class="github-card">
-            <h2>See My Projects</h2>
-            <p>Explore my work on GitHub for a closer look at what I’ve built.</p>
-            <a href="https://github.com/Mahima0123" target="_blank" class="github-link">Visit My GitHub</a>
-        </div>
+  <div class="skills-content">
+
+    <h1>My Skills</h1>
+    <div class="line"></div>
+
+    <div class="skills-cloud">
+
+      <!-- Core Backend -->
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Django</span>
+      <span class="skill-tag">SQL</span>
+
+      <!-- Databases -->
+      <span class="skill-tag">PostgreSQL</span>
+      <span class="skill-tag">MySQL</span>
+
+      <!-- Data Engineering -->
+      <span class="skill-tag">ETL Pipelines</span>
+      <span class="skill-tag">Data Modeling</span>
+      <span class="skill-tag">Pandas</span>
+      <span class="skill-tag">NumPy</span>
+
+      <!-- Streaming / Systems -->
+      <span class="skill-tag">Apache Kafka</span>
+      <span class="skill-tag">Docker</span>
+
+      <!-- Frontend -->
+      <span class="skill-tag">Angular</span>
+      <span class="skill-tag">HTML</span>
+      <span class="skill-tag">CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Bootstrap</span>
+
+      <!-- Tools -->
+      <span class="skill-tag">Git</span>
+      <span class="skill-tag">VS Code</span>
+      <span class="skill-tag">Streamlit</span>
+
     </div>
+
+    <!-- KEEP YOUR ORIGINAL GITHUB CARD STYLE -->
+    <div class="github-card">
+      <h2>See My Projects</h2>
+      <p>Explore my work on GitHub for a closer look at what I’ve built.</p>
+      <a href="https://github.com/Mahima0123" target="_blank" class="github-link">
+        Visit My GitHub
+      </a>
+    </div>
+
+  </div>
+
 </section>
