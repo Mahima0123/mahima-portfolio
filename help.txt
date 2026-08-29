@@ -1,6 +1,4 @@
-npm run build
-rm -rf docs/*
-cp -R dist/portfolio/* docs/
+ng build --base-href /  
 git add .
-git commit -m "deploy site"
+git commit
 git push origin master
